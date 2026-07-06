@@ -1,0 +1,169 @@
+PASSWORD MANAGER - SECURE PASSWORD STORAGE
+================================================================================
+
+A desktop password management application built with Python and Tkinter. The app
+generates strong passwords, stores them securely in a JSON file, and allows
+quick retrieval of saved credentials.
+
+================================================================================
+PROJECT OVERVIEW
+================================================================================
+
+Password Manager is a secure application that:
+
+Generates strong, random passwords with letters, numbers, and symbols
+
+Saves website credentials (email/username and password) to a JSON file
+
+Searches for and displays saved passwords for specific websites
+
+Copies generated passwords to clipboard automatically
+
+Validates input fields before saving
+
+This project was created as part of the "100 Days of Code" bootcamp (Day 29).
+
+================================================================================
+HOW TO USE
+================================================================================
+
+Add a New Password:
+
+Enter the website name
+
+Enter your email/username
+
+Click "Generate Password" or type your own password
+
+Click "Add" to save
+
+Generate a Password:
+
+Click "Generate Password" button
+
+A strong password (12-18 characters) is created
+
+Password is automatically copied to clipboard
+
+Search for Credentials:
+
+Enter a website name
+
+Click "Search" button
+
+If found, email and password are displayed in a popup
+
+================================================================================
+PASSWORD GENERATION
+================================================================================
+
+Generated passwords include:
+
+8-10 random letters (uppercase and lowercase)
+
+2-4 random numbers
+
+2-4 random symbols (! # $ % & ( ) * +)
+
+Shuffled for randomness
+
+12-18 characters total length
+
+================================================================================
+PROJECT STRUCTURE
+================================================================================
+
+password-manager/
+├── main.py # Main application file
+├── data.json # Password storage (created automatically)
+├── logo.png # Application logo
+├── requirements.txt # Python dependencies
+└── README.txt # This file
+
+================================================================================
+INSTALLATION & SETUP
+================================================================================
+
+Install required packages:
+pip install -r requirements.txt
+
+Or manually:
+pip install pyperclip
+
+Ensure logo.png is in the project folder
+
+Run the application:
+python main.py
+
+================================================================================
+DATA STORAGE FORMAT
+================================================================================
+
+Passwords are stored in data.json with this format:
+
+{
+"website.com": {
+"email": "user@email.com",
+"password": "GeneratedPassword123!"
+},
+"another-site.com": {
+"email": "user@email.com",
+"password": "AnotherPass456#"
+}
+}
+
+================================================================================
+SECURITY NOTES
+================================================================================
+
+⚠️ IMPORTANT SECURITY CONSIDERATIONS:
+
+This app stores passwords in PLAIN TEXT in a JSON file
+
+NOT recommended for production use without encryption
+
+For learning purposes only
+
+Consider adding encryption for real-world use
+
+Keep the data.json file secure and backed up
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+ISSUE: 'pyperclip' module not found
+SOLUTION: pip install pyperclip
+
+ISSUE: Logo not displaying
+SOLUTION: Ensure logo.png is in the project folder
+
+ISSUE: Search returns "No Data File Found"
+SOLUTION: Add at least one password first to create data.json
+
+ISSUE: Empty fields error
+SOLUTION: Fill in all required fields before saving
+
+================================================================================
+TIPS FOR USE
+================================================================================
+
+Use the "Generate Password" button for strong, random passwords
+
+The generated password is automatically copied to your clipboard
+
+Use "Search" to quickly retrieve passwords without scrolling
+
+Keep your data.json file backed up
+
+Default email can be changed in the code
+
+================================================================================
+CREDITS
+================================================================================
+
+Project: 100 Days of Code: The Complete Python Pro Bootcamp - Day 29
+
+================================================================================
+HAPPY SECURE BROWSING! 🔐
+================================================================================
