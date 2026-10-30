@@ -62,9 +62,10 @@ def save():
     else:
         try:
             with open("data.json", "r") as data_file:
-                #Reading old data
+                # Reading old data.
                 data = json.load(data_file)
         except FileNotFoundError:
+            # First save: file doesn't exist yet, so create it.
             with open("data.json", "w") as data_file:
                 json.dump(new_data, data_file, indent=4)
         else:
@@ -72,7 +73,7 @@ def save():
             data.update(new_data)
 
             with open("data.json", "w") as data_file:
-                #Saving updated data
+                # Saving updated data.
                 json.dump(data, data_file, indent=4)
         finally:
             website_entry.delete(0, END)
